@@ -7,38 +7,6 @@ import "./carts.scss";
 const Carts = () => {
   const { carts } = useSelector((state) => state.cartsReducer);
 
-  // create anagram function
-  const anagrams = ["kita", "atik", "tika", "aku", "kia", "makan", "kua"];
-  const list = [];
-  anagrams.forEach((anagram) => {
-    let letters = anagram.split("");
-    function bubbleSort(array) {
-      var done = false;
-      while (!done) {
-        done = true;
-        for (var i = 1; i < array.length; i += 1) {
-          if (array[i - 1] > array[i]) {
-            done = false;
-            var tmp = array[i - 1];
-            array[i - 1] = array[i];
-            array[i] = tmp;
-          }
-        }
-      }
-
-      return array;
-    }
-    bubbleSort(letters);
-    list[letters] ? list[letters].push(anagram) : (list[letters] = [anagram]);
-  });
-
-  const keys = Object.keys(list);
-  let val2 = [];
-  for (let val of keys) {
-    val2.push(list[val]);
-  }
-  console.log("This Result Anagram", val2);
-
   return (
     <>
       <Helmet>

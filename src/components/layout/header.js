@@ -13,7 +13,6 @@ const Header = () => {
   const { products } = useSelector((state) => state.mainReducer);
   const history = useHistory();
 
-  // search autocomplete function
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [showSearchResult, setShowSearchResult] = useState(false);
@@ -47,7 +46,7 @@ const Header = () => {
           <div
             className='navbar-web d-flex align-items-center'
             id='navbarNavAltMarkup'>
-            <div className='navbar-nav ms-auto'>
+            <div className='navbar-nav ms-auto d-flex align-items-center'>
               <div className='d-flex align-items-center search-field'>
                 <div className='search-icon'>
                   <AiOutlineSearch />
@@ -85,6 +84,16 @@ const Header = () => {
                 </div>
               )}
               <a
+                className={`nav-item nav-link ${
+                  pathname === "/anagram" && "active"
+                }`}
+                onClick={() => {
+                  history.push("/anagram");
+                  setToggle(!toggle);
+                }}>
+                Anagram
+              </a>
+              <a
                 className={`nav-item nav-link ${pathname === "/" && "active"}`}
                 onClick={() => {
                   history.push("/");
@@ -114,6 +123,16 @@ const Header = () => {
       {toggle && (
         <div className='menu-mobile d-md-none' onBlur={() => setToggle(false)}>
           <div className='navbar-nav container px-3'>
+            <a
+              className={`nav-item nav-link ${
+                pathname === "/anagram" && "active"
+              }`}
+              onClick={() => {
+                history.push("/anagram");
+                setToggle(!toggle);
+              }}>
+              Anagram
+            </a>
             <a
               className={`nav-item nav-link ${pathname === "/" && "active"}`}
               onClick={() => {
