@@ -32,7 +32,7 @@ const Header = () => {
       className='bg-white header-web'
       onClick={() => setShowSearchResult(false)}>
       <nav className='container navbar navbar-expand-md navbar-light bg-light d-flex align-items-center justify-content-between'>
-        <a className='navbar-brand' onClick={() => history.push("/")}>
+        <a className='navbar-brand' href='/'>
           JUBELIO TEST
         </a>
 
@@ -95,8 +95,8 @@ const Header = () => {
               </a>
               <a
                 className={`nav-item nav-link ${pathname === "/" && "active"}`}
+                href='/'
                 onClick={() => {
-                  history.push("/");
                   setToggle(!toggle);
                 }}>
                 Beranda
@@ -136,9 +136,9 @@ const Header = () => {
             <a
               className={`nav-item nav-link ${pathname === "/" && "active"}`}
               onClick={() => {
-                history.push("/");
                 setToggle(!toggle);
-              }}>
+              }}
+              href='/'>
               Beranda
             </a>
             <a
