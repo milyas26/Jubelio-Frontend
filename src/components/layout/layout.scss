@@ -11,6 +11,31 @@
 
     .navbar-web {
       .navbar-nav {
+        .search-field {
+          // search field
+          width: 300px;
+          margin-right: 30px;
+          border-bottom: 1px solid #000;
+          input {
+            border: none;
+            width: 100%;
+            font-size: 14px;
+            padding: 10px;
+            background: transparent;
+            color: #000;
+            outline: none;
+            transition: all 0.3s;
+          }
+        }
+
+        .searched-products {
+          position: absolute;
+          background-color: #fff;
+          width: 100%;
+          left: 0;
+          z-index: 999;
+          top: 55px;
+        }
         .nav-item {
           &.nav-link {
             font-family: Rubik;

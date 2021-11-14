@@ -1,5 +1,6 @@
 .cart-item {
   .product {
+    cursor: pointer;
     img {
       width: 100px;
       height: 100px;
@@ -8,6 +9,7 @@
     }
 
     .card-title {
+      cursor: pointer;
       font-size: 18px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -23,6 +25,7 @@
     .input-group {
       span {
         font-size: 14px;
+        cursor: pointer;
       }
 
       .input-group-text {

@@ -3,14 +3,18 @@ import "./cart-item.scss";
 import { numberWithCommas } from "config/function/numberFormatter";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 
 const CartItem = ({ data, i }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   return (
     <tr className='cart-item'>
       <td width={10}>{i + 1}</td>
       <td width={300}>
-        <div className='d-flex product'>
+        <div
+          className='d-flex product'
+          onClick={() => history.push(`/product/${data.prdNo}`)}>
           <img src={data?.prdImage01} alt='img' />
           <h5 className='card-title'>{data?.prdNm}</h5>
         </div>
@@ -57,6 +61,7 @@ const CartItem = ({ data, i }) => {
       <td width='10px'>
         <FaTrash
           onClick={() => dispatch({ type: "DELETE_CART", payload: data })}
+          style={{ cursor: "pointer" }}
         />
       </td>
     </tr>

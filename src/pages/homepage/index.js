@@ -42,12 +42,12 @@ const Homepage = () => {
       <Helmet>
         <meta charSet='utf-8' />
         <title>Homepage | Jubelio Test</title>
-        {/* <link rel='canonical' href='https://yearbook-apps.vercel.app/' /> */}
         <meta
           name='description'
           content='Fetch api menggunakan Elevenia open api, test project frontend jubelio'
         />
       </Helmet>
+
       <div className='div py-3 homepage bg-white'>
         <div className='container'>
           <h2 className='text-center mb-md-5 mb-3'>Product List</h2>
