@@ -1,0 +1,40 @@
+.detail-product {
+  .content {
+    .image {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .details {
+      .price {
+        display: flex;
+        align-items: center;
+
+        .label-harga {
+          margin-right: 10px;
+        }
+
+        .harga-coret {
+          font-size: 16px;
+          text-decoration: line-through;
+          color: #999;
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+
+        .harga-jual {
+          // shopee price style
+          font-size: 24px;
+          font-weight: bold;
+          color: #ff5a5f;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .deskripsi-produk {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

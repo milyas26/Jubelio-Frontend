@@ -1,0 +1,137 @@
+.cart-item {
+  .product {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: auto;
+    }
+  }
+
+  td {
+    font-size: 18px;
+    .input-group {
+      span {
+        font-size: 14px;
+      }
+
+      .input-group-text {
+        padding: 10px;
+      }
+      input {
+        font-size: 16px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 997px) {
+  .cart-item {
+    .product {
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-size: 16px;
+      }
+    }
+
+    td {
+      font-size: 14px;
+      .input-group {
+        span {
+          font-size: 10px;
+        }
+
+        .input-group-text {
+          padding: 5px;
+        }
+        input {
+          font-size: 12px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 771px) {
+  .cart-item {
+    .product {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-size: 12px;
+      }
+    }
+
+    td {
+      font-size: 10px;
+      .input-group {
+        span {
+          font-size: 10px;
+        }
+
+        .input-group-text {
+          padding: 2px;
+        }
+        input {
+          font-size: 10px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .cart-item {
+    .product {
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-size: 10px;
+        height: 25px;
+      }
+    }
+
+    td {
+      font-size: 9px;
+      .input-group {
+        span {
+          font-size: 6px;
+        }
+
+        .input-group-text {
+          padding: 2px;
+        }
+        input {
+          font-size: 9px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

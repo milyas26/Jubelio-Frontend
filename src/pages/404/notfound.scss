@@ -1,0 +1,58 @@
+.notfound {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+
+  .wrapper {
+    text-align: center;
+
+    img {
+      width: 500px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: auto;
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    img {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .buttons {
+      margin: auto;
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .notfound {
+    .wrapper {
+      img {
+        width: 200px;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      .buttons {
+        margin: auto;
+        max-width: 150px;
+      }
+    }
+  }
+}

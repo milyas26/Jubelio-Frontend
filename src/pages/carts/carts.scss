@@ -1,0 +1,38 @@
+.cart-page {
+  table {
+    thead {
+      tr {
+        th {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 997px) {
+  .cart-page {
+    table {
+      thead {
+        tr {
+          th {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 771px) {
+  .cart-page {
+    table {
+      thead {
+        tr {
+          th {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
