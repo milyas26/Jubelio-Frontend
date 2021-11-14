@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TagsInput } from "react-tag-input-component";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   const [selected, setSelected] = useState([]);
@@ -33,33 +34,43 @@ const Index = () => {
     val2.push(list[val]);
   }
   return (
-    <div className='container my-5'>
-      <h2>ANAGRAM LOGIC TEST</h2>
-      <TagsInput
-        value={selected}
-        onChange={setSelected}
-        name='fruits'
-        placeHolder='tambahkan kata'
-      />
-      <em>tekan enter untuk menambahkan kata</em>
-      <ul class='list-group list-group-flush mt-4'>
-        {val2?.map((val, index) => {
-          return (
-            <li class='list-group-item'>
-              <span>
-                {index + 1}.{" "}
-                {val.map((item, i) => (
-                  <span>
-                    {item}
-                    {i === val?.length - 1 ? "" : ", "}
-                  </span>
-                ))}
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Anagram Test | Jubelio Test</title>
+        <meta
+          name='description'
+          content='Fetch api menggunakan Elevenia open api, test project frontend jubelio'
+        />
+      </Helmet>
+      <div className='container my-5'>
+        <h2>ANAGRAM LOGIC TEST</h2>
+        <TagsInput
+          value={selected}
+          onChange={setSelected}
+          name='fruits'
+          placeHolder='tambahkan kata'
+        />
+        <em>tekan enter untuk menambahkan kata</em>
+        <ul class='list-group list-group-flush mt-4'>
+          {val2?.map((val, index) => {
+            return (
+              <li class='list-group-item'>
+                <span>
+                  {index + 1}.{" "}
+                  {val.map((item, i) => (
+                    <span>
+                      {item}
+                      {i === val?.length - 1 ? "" : ", "}
+                    </span>
+                  ))}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 

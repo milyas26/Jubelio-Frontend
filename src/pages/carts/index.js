@@ -12,7 +12,6 @@ const Carts = () => {
       <Helmet>
         <meta charSet='utf-8' />
         <title>Carts | Jubelio Test</title>
-        {/* <link rel='canonical' href='https://yearbook-apps.vercel.app/' /> */}
         <meta
           name='description'
           content='Fetch api menggunakan Elevenia open api, test project frontend jubelio'
