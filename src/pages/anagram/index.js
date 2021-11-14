@@ -6,7 +6,7 @@ const Index = () => {
 
   const list = [];
   selected.forEach((anagram) => {
-    let letters = anagram.split("");
+    let letters = anagram.toLowerCase().split("");
     function bubbleSort(array) {
       var done = false;
       while (!done) {
